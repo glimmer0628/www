@@ -1,0 +1,26 @@
+{
+	"index.html": {
+		"resources": [
+			"images/5.png",
+			"css/index.css",
+			"font/iconfont.woff",
+			"images/bg2.jpg",
+			"images/4.png",
+			"images/1.jpg",
+			"images/bg1.jpg",
+			"images/3.jpg",
+			"js/index.js",
+			"images/9.png",
+			"images/swiper.jpg",
+			"images/html5.png",
+			"images/8.png",
+			"images/plugin.png",
+			"images/jq.png",
+			"images/7.png",
+			"images/12.png",
+			"images/11.png",
+			"images/6.png",
+			"images/10.png"
+		]
+	}
+}
