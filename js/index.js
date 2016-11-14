@@ -59,7 +59,7 @@
 
 	var swiper=new Swiper('.swiper-container',{
 
-	     pagination: '.swiper-pagination',
+//	     pagination: '.swiper-pagination',
 
 	    onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
 	    swiperAnimate.swiperAnimateCache(swiper); //隐藏动画元素 
@@ -199,22 +199,22 @@
 	})
 
 
-	var interval=setInterval(function(){
-		
-	    if(document.readyState==='complete'){
-	    	
-	        clearInterval(interval);
-	        $('#preload').hide();
-	        $('.swiper-container').show();
-	        swiper.updateContainerSize();
-	        swiper.updateSlidesSize();
-	        
-
-	    }else{
-	    	
-	        $('#preload').show();
-	    }
-	},100);
+//	var interval=setInterval(function(){
+//		
+//	    if(document.readyState==='complete'){
+//	    	
+//	        clearInterval(interval);
+//	        $('#preload').hide();
+//	        $('.swiper-container').show();
+//	        swiper.updateContainerSize();
+//	        swiper.updateSlidesSize();
+//	        
+//
+//	    }else{
+//	    	
+//	        $('#preload').show();
+//	    }
+//	},100);
 	
 	
 	$("#galleryimg").tap(function(){
@@ -298,34 +298,46 @@ function onPlusReady() {
 	
 	map = new plus.maps.Map("map");
 	map.centerAndZoom(point, 16 );
- 	map.showUserLocation( true );// 打开用户位置
+   	map.showUserLocation( true );// 打开用户位置
 	map.reset();//重置地图
-
-
-//	plus.maps.Map.reverseGeocode(point,{},function(event){
-//		var address = event.address;  // 转换后的地理位置
-//		var point = event.coord;  // 转换后的坐标信息
-//		var coordType = event.coordType;	// 转换后的坐标系类型
-//		alert("当前位置:"+address);
-//	},function(e){
-//		alert("Failed:"+JSON.stringify(e));
-//	});
-
-	 
-//	map.setCenter( point );
-	
-	
 	
 	}, function ( e ) {
 		alert( "Geolocation error: " + e.message );
 	} );
-	
-	
+
 
 }
 
 
+// 扩展API加载完毕后调用onPlusReady回调函数 
+//document.addEventListener( "plusready", onPlusReady, false );
+// 扩展API加载完毕，现在可以正常调用扩展API 
+//function onPlusReady() {
+//	console.log("plusready");
+//}
+// 拍照
 
+//$("#gulp").tap(function(){
+//	captureImage();
+//})
+//function captureImage(){
+//	var cmr = plus.camera.getCamera();
+//	var res = cmr.supportedImageResolutions[0];
+//	var fmt = cmr.supportedImageFormats[0];
+//	console.log("Resolution: "+res+", Format: "+fmt);
+//	cmr.captureImage( function( path ){
+//			
+//			plus.io.resolveLocalFileSystemURL(path,function(entry){
+//				alert( "Capture image success: " +entry.toLocalURL() ); 
+////				document.getElementById("gulp").src=entry.toLocalURL();
+//			})
+//		},
+//		function( error ) {
+//			alert( "Capture image failed: " + error.message );
+//		},
+//		{resolution:res,format:fmt}
+//	);
+//}
 
 
 
